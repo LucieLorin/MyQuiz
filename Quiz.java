@@ -4,13 +4,8 @@ public class Quiz {
 
     int pointSUM = 0;
 
-    public boolean playerWIN() {
-        if (pointSUM >= 3) {
-            return true;
-        } else {
-            return false;
-        }
-
+    public boolean playerWIN()  {
+        return pointSUM > 2;
     }
 
     public void addAPoint() {
