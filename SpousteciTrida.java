@@ -9,12 +9,12 @@ public class SpousteciTrida {
         System.out.println("Vítej, příteli. Jaké je tvé jméno?");
         Scanner keyboardReaction = new Scanner(System.in);
         String nameOfFriend = keyboardReaction.next();
-        System.out.println(nameOfFriend + " , to je hezké jméno. Ráda tě poznávám." +
+        System.out.println(nameOfFriend + ", to je hezké jméno. Ráda tě poznávám." +
                 "Prověříme tvoje znalosti Pána prstenů. Tvým cílem je odpověďět " +
                 "správně alespoň na 3 otázky z 5. ");
 
         // Q1
-        System.out.println("Nyní máš:" + MyQuiz.pointSUM + "bodů");
+        System.out.println("Počet získaných bodů:" + MyQuiz.pointSUM);
         System.out.println("Zadej na numerické klávesnici počet prstenů Moci, " +
                 "které obdrželi vládci lidí od Saurona.");
 
@@ -37,10 +37,10 @@ public class SpousteciTrida {
             }
         }
         //Q2
-        System.out.println("Nyní máš:" + MyQuiz.pointSUM + "bodů");
+        System.out.println("Počet získaných bodů:" + MyQuiz.pointSUM);
         System.out.println("Jak se jmenuje pavoučice Odula v originále?");
         String spiderName = keyboardReaction.next();
-        List<String> stringList = Arrays.asList("Shelob", "shelob", "šelob", "selob", "shelob",
+        List<String> stringList = Arrays.asList("Shelob", "shelob", "šelob", "selob", "shelob", "shelobe",
                 "Šelob", "Selob");
 
         if (stringList.contains(spiderName)) {
@@ -51,7 +51,9 @@ public class SpousteciTrida {
         }
 
         // Q3
-        System.out.println("Nyní máš:" + MyQuiz.pointSUM + "bodů");
+        //  ALTERNATIVE - glumFriend.toUpperCase().equals(“B”)
+
+        System.out.println("Počet získaných bodů:" + MyQuiz.pointSUM);
 
         System.out.println("Jak se jmenoval hobit, kterého Glum zabil pro prsten?");
         System.out.println("A -  Sméagol");
@@ -59,7 +61,7 @@ public class SpousteciTrida {
         System.out.println("C - Bilbo");
         System.out.println("Odpověz, zda A, B nebo C. Nezapomeň na velké písmeno, jinak ti to neuznám.");
         String glumFriend = keyboardReaction.next();
-        if (glumFriend == "B") {
+        if (glumFriend.equals("B")) {
             System.out.println("Tancavë! Přičítám ti bod.");
             MyQuiz.addAPoint();
         } else {
@@ -67,7 +69,8 @@ public class SpousteciTrida {
         }
 
         //Q4
-        System.out.println("Nyní máš:" + MyQuiz.pointSUM + "bodů");
+
+        System.out.println("Počet získaných bodů:" + MyQuiz.pointSUM);
 
         System.out.println("Kolik Oscarů získal film PÁN PRSTENŮ - DVĚ VĚŽE?");
         int oscar = keyboardReaction.nextInt();
@@ -80,9 +83,9 @@ public class SpousteciTrida {
 
         }
         // Q5
-        System.out.println("Nyní máš:" + MyQuiz.pointSUM + "bodů");
+        System.out.println("Počet získaných bodů:" + MyQuiz.pointSUM);
 
-        System.out.println("Poslední otázka. Co znamená v elfštině NILDO?");
+        System.out.println("Poslední otázka. Jaký význam má slovo NILDO či MELLON?");
         String elvenName = keyboardReaction.next();
         List<String> stringList2 = Arrays.asList("kamarad", "kamarád", "pritel", "přítel",
                 "prítel", "přitel", "druh", "Kamarad", "Kamarád", "Pritel", "Přítel", "Prítel", "Přitel", "Druh");
@@ -94,10 +97,11 @@ public class SpousteciTrida {
             System.out.println("Odpověď není správná.");
         }
 
+        System.out.println("Počet získaných bodů:" + MyQuiz.pointSUM + " z 5 možných.");
         if (MyQuiz.playerWIN()) {
-            System.out.println("Prošel jsi testem! Skvělý výsledek. Pochlub se kamarádům :-)");
+            System.out.println("Prošel jsi testem! Skvělý výsledek. Pochlub se kamarádům :o)");
         } else {
-            System.out.println("To na výhrnu nestačí. Ale je skvělé, žes to zkusil!");
+            System.out.println("To na výhru nestačí. Ale je skvělé, žes to zkusil!");
         }
 
     }
